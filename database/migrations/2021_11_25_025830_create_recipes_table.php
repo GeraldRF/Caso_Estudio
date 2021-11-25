@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParagraphsTable extends Migration
+class CreateRecipesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateParagraphsTable extends Migration
      */
     public function up()
     {
-        Schema::create('paragraphs', function (Blueprint $table) {
+        Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('chapter_id')->references('id')->on('chapters');
+            $table->string('title');
+            $table->integer('serving');
+            $table->string('instructions');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateParagraphsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paragraphs');
+        Schema::dropIfExists('recipes');
     }
 }

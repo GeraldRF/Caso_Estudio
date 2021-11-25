@@ -9,7 +9,7 @@ class Chapter extends Model
 {
     use HasFactory;
 
-    protected $filleable = ['book_id'];
+    protected $fillable = ['book_id',];
 
     function book(){
 

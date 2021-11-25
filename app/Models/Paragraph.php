@@ -9,11 +9,15 @@ class Paragraph extends Model
 {
     use HasFactory;
 
-    protected $filleable = ['chapter_id','sentences'];
+    protected $fillable = ['chapter_id',];
 
     function chapter(){
 
     return $this->belongsTo(Chapter::class);
     
+    }
+    
+    function sentence(){
+        return $this->hasMany(Sentence::class);
     }
 }
