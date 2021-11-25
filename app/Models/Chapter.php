@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Chapter extends Model
 {
     use HasFactory;
+
+
+    function book(){
+
+    return $this->belongsTo(Book::class);
+
+    }
+
+    function paragraphs(){
+
+        return $this->hasMany(Paragraph::class);
+        
+    }
+
+
 }

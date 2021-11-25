@@ -15,6 +15,8 @@ class CreateParagraphsTable extends Migration
     {
         Schema::create('paragraphs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('chapter_id')->references('id')->on('chapter')->onDelete('cascade');
+            $table->longText('sentences');
             $table->timestamps();
         });
     }

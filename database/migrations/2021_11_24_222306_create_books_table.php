@@ -15,7 +15,6 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            //$table->foreignId('chapter_id')->references('id')->on('chapter')->onDelete('cascade');
             $table->timestamps();
         });
     }

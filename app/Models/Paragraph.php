@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Paragraph extends Model
 {
     use HasFactory;
+
+    protected $filleable = ['sentences'];
+
+    function chapter(){
+
+    return $this->belongsTo(Chapter::class);
+    
+    }
 }
