@@ -9,7 +9,7 @@ class Paragraph extends Model
 {
     use HasFactory;
 
-    protected $filleable = ['sentences'];
+    protected $filleable = ['chapter_id','sentences'];
 
     function chapter(){
 
