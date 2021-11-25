@@ -10,6 +10,8 @@ class Book extends Model
     use HasFactory;
 
     function chapter(){
-            return $this->hasMany(chapter::class);
+
+        return $this->hasMany(Chapter::class);
+
     }
 }
