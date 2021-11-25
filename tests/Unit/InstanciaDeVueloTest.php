@@ -14,8 +14,13 @@ class InstanciaDeVueloTest extends TestCase
      */
     public function test_instanciarVuelo()
     {
-        $vuelo = new Vuelo(1,2,3,4);
-        
-    $this->assertTrue($vuelo->NumeroVuelo == 1 && $vuelo->Avion_Id == 2  && $vuelo->AeropuertoSalida_Id==3 && $vuelo->AeropuertoLLegada_Id == 4);
+        $vuelo = new vuelo(['numero_vuelo'=>1, 'avion_id'=>2, 'aeropuerto_salida_id'=>3, 'aeropuerto_llegada_id'=>4]);
+         
+        echo $vuelo->numero_vuelo;
+        echo $vuelo->avion_id;
+        echo $vuelo->aeropuerto_salida_id;
+        echo $vuelo->aeropuerto_llegada_id;
+
+    $this->assertTrue($vuelo->numero_vuelo == 1 && $vuelo->avion_id == 2  && $vuelo->aeropuerto_salida_id==3 && $vuelo->aeropuerto_llegada_id == 4);
     }
 }
