@@ -14,10 +14,11 @@ class CreateVuelosTable extends Migration
     public function up()
     {
         Schema::create('vuelos', function (Blueprint $table) {
-            $table->Integer('NumeroVuelo');
-            $table->foreignId('Avion_id')->references('id')->on('avions')->onDelete('cascade');
-            $table->foreignId('AeropuertoaSalida_id')->references('id')->on('aeropuertos')->onDelete('cascade');
-            $table->foreignId('AeropuertoaLLegada_id')->references('id')->on('aeropuertos')->onDelete('cascade');
+            $table->id();
+            $table->Integer('numero_vuelo');
+            $table->foreignId('avion_id')->references('id')->on('avions');
+            $table->foreignId('aeropuerto_salida_id')->references('id')->on('aeropuertos');
+            $table->foreignId('aeropuerto_llegada_id')->references('id')->on('aeropuertos');
             $table->timestamps();
         });
     }

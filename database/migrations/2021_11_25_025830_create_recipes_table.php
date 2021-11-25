@@ -18,7 +18,7 @@ class CreateRecipesTable extends Migration
             $table->string('title');
             $table->integer('serving');
             $table->string('instructions');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

@@ -9,15 +9,7 @@ class Recipe extends Model
 {
     use HasFactory;
 
-    public $title;
-    public $serving;
-    public $instructions;
-
-    function __construct($title, $serving, $instructions){
-        $this->title = $title;
-        $this->serving = $serving;
-        $this->instructions = $instructions;
-    }
+    protected $table = 'recipes';
 
     protected $fillable = ['title', 'serving', 'instructions',];
 
