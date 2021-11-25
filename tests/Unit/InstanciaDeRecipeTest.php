@@ -12,12 +12,11 @@ class InstanciaDeRecipeTest extends TestCase
      *
      * @return void
      */
-    public function instanciarRecipe()
+    public function test_instanciarRecipe()
     {
 
         $recipe = new Recipe('Sopa de carne', 20, 'Comer a 30 grados');
         
         $this->assertTrue($recipe->title == 'Sopa de carne' && $recipe->serving == 20 && $recipe->instructions == 'Comer a 30 grados');
-        
     }
 }
